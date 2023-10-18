@@ -1,2 +1,0 @@
-CompressedTexture2D
-Image
