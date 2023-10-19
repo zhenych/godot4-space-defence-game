@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://xtlwiemmp4ta"]
+
+[ext_resource type="Texture2D" uid="uid://d0db8olmo0e45" path="res://assets/Main ship weapon - Projectile - Rocket.png" id="1_cfc71"]
+[ext_resource type="Script" path="res://elements/rocket/rocket.gd" id="1_ms5wp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1r0a"]
+atlas = ExtResource("1_cfc71")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e1ha"]
+atlas = ExtResource("1_cfc71")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljecy"]
+atlas = ExtResource("1_cfc71")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hoqk0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1r0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e1ha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljecy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2njhi"]
+radius = 3.0
+height = 14.0
+
+[node name="Rocket" type="CharacterBody2D"]
+script = ExtResource("1_ms5wp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hoqk0")
+autoplay = "default"
+frame_progress = 0.613945
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_2njhi")
