@@ -11,8 +11,6 @@ func _physics_process(delta: float):
 	if direction.x == 0 and direction.y == 0:
 		return
 		
-	# Distance in current frame
-	var distance = 	SPEED * delta
 	# Movement x using velocity
 	velocity.x = direction.x * SPEED
 	move_and_slide()
