@@ -9,6 +9,8 @@ func _physics_process(delta):
 		# enemy collide
 		print("kill enemy")
 		queue_free()
+		if collider.has_method("destroy"):
+			collider.destroy()
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
