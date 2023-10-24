@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfe2ic2u2xhj"]
+
+[ext_resource type="Script" path="res://elements/enemy_group/enemy_group.gd" id="1_lbs5i"]
+
+[node name="EnemyGroup" type="Node2D"]
+script = ExtResource("1_lbs5i")
+
+[node name="BlockTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true

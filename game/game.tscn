@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://8ea5fftrm6tt" path="res://assets/Space_Stars2.png" id="1_sh16i"]
 [ext_resource type="PackedScene" uid="uid://bg3x2kq8w1wcb" path="res://elements/space_ship/space_ship.tscn" id="2_gk2gg"]
 [ext_resource type="PackedScene" uid="uid://btvx0clii48x7" path="res://elements/wall/wall.tscn" id="3_hmd57"]
-[ext_resource type="PackedScene" uid="uid://b30gmav0badhi" path="res://elements/enemy/enemy.tscn" id="4_c2kst"]
+[ext_resource type="PackedScene" uid="uid://dfe2ic2u2xhj" path="res://elements/enemy_group/enemy_group.tscn" id="4_obyja"]
 
 [node name="Game" type="Node2D"]
 
@@ -22,44 +22,4 @@ position = Vector2(134, 214)
 [node name="Wall2" parent="." instance=ExtResource("3_hmd57")]
 position = Vector2(256, 0)
 
-[node name="Enemy" parent="." instance=ExtResource("4_c2kst")]
-position = Vector2(24, 16)
-
-[node name="Enemy2" parent="." instance=ExtResource("4_c2kst")]
-position = Vector2(56, 16)
-
-[node name="Enemy3" parent="." instance=ExtResource("4_c2kst")]
-position = Vector2(88, 16)
-
-[node name="Enemy4" parent="." instance=ExtResource("4_c2kst")]
-position = Vector2(120, 16)
-
-[node name="Enemy5" parent="." instance=ExtResource("4_c2kst")]
-position = Vector2(152, 16)
-
-[node name="Enemy6" parent="." instance=ExtResource("4_c2kst")]
-position = Vector2(184, 16)
-
-[node name="Enemy7" parent="." instance=ExtResource("4_c2kst")]
-position = Vector2(216, 16)
-
-[node name="Enemy8" parent="." instance=ExtResource("4_c2kst")]
-position = Vector2(40, 40)
-
-[node name="Enemy9" parent="." instance=ExtResource("4_c2kst")]
-position = Vector2(72, 40)
-
-[node name="Enemy10" parent="." instance=ExtResource("4_c2kst")]
-position = Vector2(104, 40)
-
-[node name="Enemy11" parent="." instance=ExtResource("4_c2kst")]
-position = Vector2(136, 40)
-
-[node name="Enemy12" parent="." instance=ExtResource("4_c2kst")]
-position = Vector2(168, 40)
-
-[node name="Enemy13" parent="." instance=ExtResource("4_c2kst")]
-position = Vector2(200, 40)
-
-[node name="Enemy14" parent="." instance=ExtResource("4_c2kst")]
-position = Vector2(232, 40)
+[node name="EnemyGroup" parent="." groups=["enemy_group"] instance=ExtResource("4_obyja")]
