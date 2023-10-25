@@ -20,3 +20,7 @@ func shot():
 	rocket.top_level = true
 	rocket.global_position = global_position + Vector2(0, -30)
 	add_child(rocket)
+
+func take_damage():
+	print("Take damage")
+	pass

@@ -9,6 +9,7 @@ const SPEED_BOOST = 2.5
  
 @onready var enemy = preload("res://elements/enemy/enemy.tscn")
 @onready var block_timer = $BlockTimer
+@onready var short_timer = $ShotTimer
 
 var direction = Vector2.RIGHT
 var speed = 5.0
@@ -34,3 +35,9 @@ func create_enemies( rows: int):
 			item.position.y = POSITION_INIT_Y[row]
 			item.position.x =  POSITION_INIT_X[row] + i * POSITION_STEP
 			add_child(item)
+
+
+func _on_shot_timer_timeout():
+	var enemies = get_tree().get_nodes_in_group("enemy")
+	if enemies.size() > 0:
+		enemies.pick_random().shot()
