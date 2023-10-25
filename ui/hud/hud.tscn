@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://67vrh264oynf"]
+
+[ext_resource type="Texture2D" uid="uid://b108dqnhy2smj" path="res://assets/Main Ship - Base - Full health.png" id="1_jlb10"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsb3k"]
+atlas = ExtResource("1_jlb10")
+region = Rect2(9, 9, 30, 29)
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "100"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = SubResource("AtlasTexture_tsb3k")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = SubResource("AtlasTexture_tsb3k")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = SubResource("AtlasTexture_tsb3k")
+expand_mode = 1
+stretch_mode = 5
