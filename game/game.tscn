@@ -10,8 +10,6 @@
 
 [node name="HUD" parent="." instance=ExtResource("1_pot77")]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="HUD"]
-
 [node name="Background" type="Sprite2D" parent="."]
 texture_repeat = 2
 position = Vector2(128, 120)
@@ -28,3 +26,37 @@ position = Vector2(134, 214)
 position = Vector2(256, 0)
 
 [node name="EnemyGroup" parent="." groups=["enemy_group"] instance=ExtResource("4_obyja")]
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.756863)
+
+[node name="MarginContainer" type="MarginContainer" parent="GameOver"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOver/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="GameOver/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="GameOver/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "RESTART"
