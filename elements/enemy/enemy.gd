@@ -6,6 +6,7 @@ const BULLET_SCENE := preload("res://elements/enemy_bullet/enemy_bullet.tscn")
 @onready var ray_cast_right = $RayCastRight
 
 func destroy():
+	Globals.change_points( +1)
 	queue_free()
 
 func _physics_process(delta):

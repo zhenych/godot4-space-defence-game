@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://67vrh264oynf"]
+[gd_scene load_steps=4 format=3 uid="uid://67vrh264oynf"]
 
 [ext_resource type="Texture2D" uid="uid://b108dqnhy2smj" path="res://assets/Main Ship - Base - Full health.png" id="1_jlb10"]
+[ext_resource type="Script" path="res://ui/hud/hud.gd" id="1_x3wj2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tsb3k"]
 atlas = ExtResource("1_jlb10")
 region = Rect2(9, 9, 30, 29)
 
 [node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_x3wj2")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -25,10 +27,10 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="PointsLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
-text = "100"
+text = "0"
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
