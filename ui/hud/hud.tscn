@@ -1,11 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://67vrh264oynf"]
+[gd_scene load_steps=3 format=3 uid="uid://67vrh264oynf"]
 
-[ext_resource type="Texture2D" uid="uid://b108dqnhy2smj" path="res://assets/Main Ship - Base - Full health.png" id="1_jlb10"]
 [ext_resource type="Script" path="res://ui/hud/hud.gd" id="1_x3wj2"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tsb3k"]
-atlas = ExtResource("1_jlb10")
-region = Rect2(9, 9, 30, 29)
+[ext_resource type="PackedScene" uid="uid://ht8r5biq6kl" path="res://ui/lives_bar/lives_bar.tscn" id="2_tufm2"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_x3wj2")
@@ -36,27 +32,5 @@ text = "0"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="LivesBar" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_tufm2")]
 layout_mode = 2
-alignment = 2
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
-texture = SubResource("AtlasTexture_tsb3k")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
-texture = SubResource("AtlasTexture_tsb3k")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
-texture = SubResource("AtlasTexture_tsb3k")
-expand_mode = 1
-stretch_mode = 5

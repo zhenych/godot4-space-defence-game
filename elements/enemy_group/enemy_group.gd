@@ -1,8 +1,9 @@
 extends Node2D
 # Enemies creation
+const ENEMY_IN_ROW := 6
 const POSITION_INIT_X = [ 25, 40, 25]
-const POSITION_INIT_Y = [ 15, 40, 65]
-const POSITION_STEP = 30.0
+const POSITION_INIT_Y = [ 35, 60, 85]
+const POSITION_STEP := 30.0
 # Movement
 const ROW_STEP = 10.0
 const SPEED_BOOST = 2.5
@@ -30,7 +31,7 @@ func change_direction():
 
 func create_enemies( rows: int):
 	for row in range (rows):
-		for i in range ( 7):
+		for i in range ( ENEMY_IN_ROW):
 			var item: CharacterBody2D = enemy.instantiate()
 			item.position.y = POSITION_INIT_Y[row]
 			item.position.x =  POSITION_INIT_X[row] + i * POSITION_STEP

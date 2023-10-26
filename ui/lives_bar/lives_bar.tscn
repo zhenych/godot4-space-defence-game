@@ -1,31 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ht8r5biq6kl"]
+[gd_scene load_steps=2 format=3 uid="uid://ht8r5biq6kl"]
 
-[ext_resource type="Texture2D" uid="uid://b108dqnhy2smj" path="res://assets/Main Ship - Base - Full health.png" id="1_hv2k0"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tsb3k"]
-atlas = ExtResource("1_hv2k0")
-region = Rect2(9, 9, 30, 29)
+[ext_resource type="Script" path="res://ui/lives_bar/lives_bar.gd" id="1_uxk14"]
 
 [node name="LivesBar" type="HBoxContainer"]
 alignment = 2
-
-[node name="TextureRect" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
-texture = SubResource("AtlasTexture_tsb3k")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="TextureRect2" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
-texture = SubResource("AtlasTexture_tsb3k")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="TextureRect3" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
-texture = SubResource("AtlasTexture_tsb3k")
-expand_mode = 1
-stretch_mode = 5
+script = ExtResource("1_uxk14")

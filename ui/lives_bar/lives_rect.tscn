@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://smtxpp8n745y"]
+
+[ext_resource type="Texture2D" uid="uid://b108dqnhy2smj" path="res://assets/Main Ship - Base - Full health.png" id="1_bdacy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsb3k"]
+atlas = ExtResource("1_bdacy")
+region = Rect2(9, 9, 30, 29)
+
+[node name="LivesRect" type="TextureRect"]
+custom_minimum_size = Vector2(16, 16)
+texture = SubResource("AtlasTexture_tsb3k")
+expand_mode = 1
+stretch_mode = 5
