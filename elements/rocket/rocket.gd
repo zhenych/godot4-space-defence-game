@@ -7,7 +7,6 @@ func _physics_process(delta):
 	if collision:
 		var collider = collision.get_collider()
 		# enemy collide
-		print("kill enemy")
 		queue_free()
 		if collider.has_method("destroy"):
 			collider.destroy()
