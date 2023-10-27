@@ -7,6 +7,7 @@ const BULLET_SCENE := preload("res://elements/enemy_bullet/enemy_bullet.tscn")
 
 func destroy():
 	Globals.change_points( +1)
+	Events.enemy_died.emit()
 	queue_free()
 
 func _physics_process(delta):

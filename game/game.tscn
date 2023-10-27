@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlk4guqfireip"]
+[gd_scene load_steps=7 format=3 uid="uid://dlk4guqfireip"]
 
 [ext_resource type="PackedScene" uid="uid://67vrh264oynf" path="res://ui/hud/hud.tscn" id="1_pot77"]
 [ext_resource type="Texture2D" uid="uid://8ea5fftrm6tt" path="res://assets/Space_Stars2.png" id="1_sh16i"]
+[ext_resource type="Script" path="res://game/game.gd" id="1_yp5ld"]
 [ext_resource type="PackedScene" uid="uid://bg3x2kq8w1wcb" path="res://elements/space_ship/space_ship.tscn" id="2_gk2gg"]
 [ext_resource type="PackedScene" uid="uid://btvx0clii48x7" path="res://elements/wall/wall.tscn" id="3_hmd57"]
 [ext_resource type="PackedScene" uid="uid://dfe2ic2u2xhj" path="res://elements/enemy_group/enemy_group.tscn" id="4_obyja"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_yp5ld")
 
 [node name="HUD" parent="." instance=ExtResource("1_pot77")]
 
@@ -26,37 +28,3 @@ position = Vector2(134, 214)
 position = Vector2(256, 0)
 
 [node name="EnemyGroup" parent="." groups=["enemy_group"] instance=ExtResource("4_obyja")]
-
-[node name="GameOver" type="CanvasLayer" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="GameOver"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.756863)
-
-[node name="MarginContainer" type="MarginContainer" parent="GameOver"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_right = 30
-
-[node name="VBoxContainer" type="VBoxContainer" parent="GameOver/MarginContainer"]
-layout_mode = 2
-size_flags_vertical = 4
-alignment = 1
-
-[node name="Label" type="Label" parent="GameOver/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "GAME OVER"
-horizontal_alignment = 1
-
-[node name="Button" type="Button" parent="GameOver/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "RESTART"
